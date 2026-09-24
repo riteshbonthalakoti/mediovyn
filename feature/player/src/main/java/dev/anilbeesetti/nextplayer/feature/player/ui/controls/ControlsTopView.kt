@@ -36,7 +36,7 @@ import com.mediovyn.player.core.ui.extensions.copy
 import com.mediovyn.player.core.ui.theme.MediovynTheme
 import com.mediovyn.player.feature.player.buttons.PlayerButton
 import com.mediovyn.player.feature.player.model.labelRes
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 
 @OptIn(UnstableApi::class)
 @Composable

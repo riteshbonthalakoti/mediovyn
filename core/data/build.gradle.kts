@@ -35,7 +35,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.github.anilbeesetti.nextlib.mediainfo)
+    implementation(libs.github.riteshbonthalakoti.mediovynlib.mediainfo)
 
     // Koin
     implementation(libs.koin.core)

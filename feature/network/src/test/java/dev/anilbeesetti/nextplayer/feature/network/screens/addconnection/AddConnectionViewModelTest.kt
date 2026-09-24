@@ -254,7 +254,7 @@ class AddConnectionViewModelTest {
     @Test
     fun `connection screen never stores password fields with rememberSaveable`() {
         val source = File(
-            "src/main/java/dev/anilbeesetti/Mediovyn/feature/network/screens/addconnection/AddConnectionScreen.kt",
+            "src/main/java/dev/riteshbonthalakoti/Mediovyn/feature/network/screens/addconnection/AddConnectionScreen.kt",
         ).readText()
 
         assertFalse(source.contains("var password by rememberSaveable"))

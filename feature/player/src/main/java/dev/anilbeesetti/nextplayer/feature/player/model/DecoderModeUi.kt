@@ -2,7 +2,7 @@ package com.mediovyn.player.feature.player.model
 
 import androidx.annotation.StringRes
 import com.mediovyn.player.core.ui.R
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 
 val selectableDecoderModes = listOf(
     DecoderMode.HARDWARE,

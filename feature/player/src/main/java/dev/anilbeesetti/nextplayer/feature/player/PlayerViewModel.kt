@@ -14,7 +14,7 @@ import com.mediovyn.player.core.ui.base.MviViewModel
 import com.mediovyn.player.feature.player.model.DecoderServiceState
 import com.mediovyn.player.feature.player.state.SubtitleOptionsEvent
 import com.mediovyn.player.feature.player.state.VideoZoomEvent
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

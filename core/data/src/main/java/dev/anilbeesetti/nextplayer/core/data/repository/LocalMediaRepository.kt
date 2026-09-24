@@ -19,7 +19,7 @@ import com.mediovyn.player.core.media.services.MediaService
 import com.mediovyn.player.core.model.Folder
 import com.mediovyn.player.core.model.MediaInfo
 import com.mediovyn.player.core.model.Video
-import io.github.anilbeesetti.nextlib.mediainfo.MediaInfoBuilder
+import io.github.riteshbonthalakoti.mediovynlib.mediainfo.MediaInfoBuilder
 import java.util.Date
 import kotlin.math.absoluteValue
 import kotlinx.coroutines.Dispatchers

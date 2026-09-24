@@ -1,4 +1,4 @@
-package dev.anilbeesetti.nextplayer.core.data.licensing
+package com.mediovyn.player.core.data.licensing
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit

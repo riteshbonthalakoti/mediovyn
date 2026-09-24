@@ -1,6 +1,6 @@
 package com.mediovyn.player.feature.player.model
 
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 
 /** Player-service recovery state exposed to the controller while handling a decoder failure. */
 enum class DecoderRecoveryStatus {
