@@ -21,7 +21,7 @@ import com.mediovyn.player.feature.player.extensions.switchTrack
 import com.mediovyn.player.feature.player.extensions.videoDecoderMode
 import com.mediovyn.player.feature.player.service.CustomCommands
 import com.mediovyn.player.feature.player.service.PlayerService
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 import java.io.File
 import java.nio.ByteBuffer
 import java.nio.ByteOrder

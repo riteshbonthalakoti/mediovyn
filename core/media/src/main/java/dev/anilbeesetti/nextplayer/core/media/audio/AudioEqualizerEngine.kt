@@ -1,4 +1,4 @@
-package dev.anilbeesetti.nextplayer.core.media.audio
+package com.mediovyn.player.core.media.audio
 
 import android.media.audiofx.Equalizer
 import android.media.audiofx.LoudnessEnhancer

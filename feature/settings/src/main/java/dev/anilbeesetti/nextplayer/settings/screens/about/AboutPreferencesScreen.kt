@@ -68,10 +68,10 @@ import com.mediovyn.player.core.ui.components.tvListFocus
 import com.mediovyn.player.core.ui.designsystem.NextIcons
 import kotlinx.coroutines.launch
 
-private const val GITHUB_URL = "https://github.com/anilbeesetti/Mediovyn"
-private const val KOFI_URL = "https://ko-fi.com/anilbeesetti"
-private const val PAYPAL_URL = "https://paypal.me/AnilBeesetti"
-private const val UPI_ID = "anilbeesetti10@oksbi"
+private const val GITHUB_URL = "https://github.com/riteshbonthalakoti/Mediovyn"
+private const val KOFI_URL = "https://ko-fi.com/riteshbonthalakoti"
+private const val PAYPAL_URL = "https://paypal.me/riteshbonthalakoti"
+private const val UPI_ID = "riteshbonthalakoti10@oksbi"
 
 @Composable
 fun AboutPreferencesScreen(viewModel: AboutPreferencesViewModel) {

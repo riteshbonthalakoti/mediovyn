@@ -15,12 +15,12 @@ dependencyResolutionManagement {
 }
 
 
-// Opt in with -PnextlibPath=../nextlib to test unpublished decoder changes.
-providers.gradleProperty("nextlibPath").orNull?.let { nextlibPath ->
-    includeBuild(nextlibPath) {
+// Opt in with -PmediovynlibPath=../mediovynlib to test unpublished decoder changes.
+providers.gradleProperty("mediovynlibPath").orNull?.let { mediovynlibPath ->
+    includeBuild(mediovynlibPath) {
         dependencySubstitution {
-            substitute(module("io.github.anilbeesetti:nextlib-media3ext")).using(project(":media3ext"))
-            substitute(module("io.github.anilbeesetti:nextlib-mediainfo")).using(project(":mediainfo"))
+            substitute(module("io.github.riteshbonthalakoti:mediovynlib-media3ext")).using(project(":media3ext"))
+            substitute(module("io.github.riteshbonthalakoti:mediovynlib-mediainfo")).using(project(":mediainfo"))
         }
     }
 }

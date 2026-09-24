@@ -1,1 +1,1 @@
-A simple material you video player based on Media3
+Modern native Android video & audio player with Equalizer, Vault & Cloud Streaming.

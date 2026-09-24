@@ -3,7 +3,7 @@ package com.mediovyn.player.feature.player.service
 import android.os.Bundle
 import com.mediovyn.player.feature.player.model.DecoderRecoveryStatus
 import com.mediovyn.player.feature.player.model.DecoderTrackType
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

@@ -10,7 +10,7 @@ import androidx.media3.extractor.metadata.Chapter
 import com.mediovyn.player.core.model.VideoContentScale
 import com.mediovyn.player.feature.player.extensions.noRippleClickable
 import com.mediovyn.player.feature.player.state.SubtitleOptionsEvent
-import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
 
 @Composable
 fun BoxScope.OverlayShowView(

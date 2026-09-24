@@ -1,4 +1,4 @@
-package dev.anilbeesetti.nextplayer.feature.player.subtitles
+package com.mediovyn.player.feature.player.subtitles
 
 import java.io.File
 import java.net.HttpURLConnection

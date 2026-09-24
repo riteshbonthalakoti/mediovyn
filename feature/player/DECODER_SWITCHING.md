@@ -1,6 +1,6 @@
 # Runtime decoder switching
 
-NextPlayer uses nextlib's `DecoderManager` on one `ExoPlayer`. Video and audio choices are
+Mediovyn uses mediovynlib's `DecoderManager` on one `ExoPlayer`. Video and audio choices are
 independent and stored in each `MediaItem`. New items default to `AUTO`; returning to an
 existing playlist item restores its saved choices. Metadata updates preserve those choices.
 The overlay offers HW (`HARDWARE`), SW+ (`SOFTWARE` MediaCodec), and SW (`FFMPEG`).
@@ -15,7 +15,7 @@ decoderManager.attach(player)
 // Before release: decoderManager.detach()
 ```
 
-`PlayerService` sends selections to nextlib and reads requested modes from `videoMode` /
+`PlayerService` sends selections to mediovynlib and reads requested modes from `videoMode` /
 `audioMode`. It publishes `activeVideoMode` / `activeAudioMode` and recovery state through
 MediaSession extras. `PlayerActivity` receives `onExtrasChanged` and passes the state to
 Compose, so a dialog or decoder label can update without a playback-state event. Existing
@@ -32,10 +32,10 @@ item, seeks to it, then removes the old item. This recreates only the current so
 preserving position, playback intent, and the original shuffle order. `replaceMediaItem`
 alone can reuse a source without loading new subtitle configurations. Resume metadata also
 uses the current playback position.
-Nextlib also restores active modes from successful decoder reuse evaluations: a renderer can be
+mediovynlib also restores active modes from successful decoder reuse evaluations: a renderer can be
 disabled and enabled again without initializing a new codec.
 
-NextPlayer owns fallback policy. Each track keeps a bounded queue of fallback modes;
+Mediovyn owns fallback policy. Each track keeps a bounded queue of fallback modes;
 duplicate failures for the same attempt are ignored.
 
 | Failed selection | Next attempts |
@@ -49,34 +49,34 @@ duplicate failures for the same attempt are ignored.
 Only present, unsupported tracks or decoder-related playback errors start recovery.
 Missing audio/video tracks do not. Decoder initialization clears recovery for that track.
 Non-decoder errors use the normal error dialog. A retry prepares the player if it currently
-has an error; otherwise nextlib handles track remapping and codec restarts. Position,
+has an error; otherwise mediovynlib handles track remapping and codec restarts. Position,
 playlist, and `playWhenReady` remain intact.
 
 ## Local verification
 
-Use the sibling nextlib checkout without changing published dependencies:
+Use the sibling mediovynlib checkout without changing published dependencies:
 
 ```sh
-ANDROID_HOME=/path/to/sdk ./gradlew -PnextlibPath=../nextlib assembleDebug test ktlintCheck
+ANDROID_HOME=/path/to/sdk ./gradlew -PmediovynlibPath=../mediovynlib assembleDebug test ktlintCheck
 ```
 
-Without `nextlibPath`, Gradle uses the published version. Tests cover fallback exhaustion,
+Without `mediovynlibPath`, Gradle uses the published version. Tests cover fallback exhaustion,
 confirmation, duplicate failures, independent attempts, per-item decoder choices, and session-state
 parsing. Device verification must also cover switching while paused/playing, actual decoder
 names, position continuity, independent audio/video choices, and fallback dialogs.
 
 ## Verification on 2026-09-05
 
-Tested NextPlayer `fa76f296` against local nextlib `72b4125`, including nextlib's merge of
+Tested Mediovyn `fa76f296` against local mediovynlib `72b4125`, including mediovynlib's merge of
 `origin/main` (`aafaf8a`). `assembleDebug`, `test`, and `ktlintCheck` passed with local composite
-substitution and test failures enforced (158 NextPlayer tests, 10 nextlib tests). The APK's
-arm64 `libmedia3ext.so` SHA-256 matched nextlib's local debug JNI library.
+substitution and test failures enforced (158 Mediovyn tests, 10 mediovynlib tests). The APK's
+arm64 `libmedia3ext.so` SHA-256 matched mediovynlib's local debug JNI library.
 
 Disposable device: ARM64 Android API 37 / Android 37.1 system image, 16 KB pages, Pixel 6a
 profile. Tested SwiftShader and host GPU rendering. No app crash was recorded.
 
 - Automatic H.264 video reported HW (`c2.goldfish.h264.decoder`), AAC audio SW+
-  (`c2.android.aac.decoder`). The emulator exposed an initialization-order bug in nextlib;
+  (`c2.android.aac.decoder`). The emulator exposed an initialization-order bug in mediovynlib;
   `72b4125` fixes it using codec information captured during selection.
 - HW → FFmpeg → Android software → HW video switching kept one ExoPlayer instance.
   Paused position stayed within 4 ms (52,947 → 52,951 ms); switching while playing retained
@@ -90,5 +90,5 @@ profile. Tested SwiftShader and host GPU rendering. No app crash was recorded.
 
 **Unresolved visual issue:** FFmpeg video output was green with SwiftShader and had incorrect
 colors with host GPU rendering. MediaCodec output was correct. The native rendering source is
-unchanged from nextlib main; these checks do not establish whether physical devices are affected.
+unchanged from mediovynlib main; these checks do not establish whether physical devices are affected.
 Decoder selection and recovery passed, but FFmpeg visual playback did not.

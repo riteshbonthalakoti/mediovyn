@@ -1,4 +1,4 @@
-package dev.anilbeesetti.nextplayer.feature.player.ui
+package com.mediovyn.player.feature.player.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dev.anilbeesetti.nextplayer.core.media.audio.AudioEqualizerEngine
+import com.mediovyn.player.core.media.audio.AudioEqualizerEngine
 
 /**
  * 10-Band Audio Equalizer & Volume Booster Dialog for MEDIOVYN.

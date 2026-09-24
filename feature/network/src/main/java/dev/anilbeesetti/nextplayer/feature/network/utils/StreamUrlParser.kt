@@ -1,4 +1,4 @@
-package dev.anilbeesetti.nextplayer.feature.network.utils
+package com.mediovyn.player.feature.network.utils
 
 import android.net.Uri
 

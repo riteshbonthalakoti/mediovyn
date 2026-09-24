@@ -20,8 +20,8 @@ import com.mediovyn.player.feature.player.service.getSubtitleDelayMilliseconds
 import com.mediovyn.player.feature.player.service.getSubtitleSpeed
 import com.mediovyn.player.feature.player.service.setSubtitleDelayMilliseconds
 import com.mediovyn.player.feature.player.service.setSubtitleSpeed
-import io.github.anilbeesetti.nextlib.media3ext.renderer.subtitleDelayMilliseconds
-import io.github.anilbeesetti.nextlib.media3ext.renderer.subtitleSpeed
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.renderer.subtitleDelayMilliseconds
+import io.github.riteshbonthalakoti.mediovynlib.media3ext.renderer.subtitleSpeed
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

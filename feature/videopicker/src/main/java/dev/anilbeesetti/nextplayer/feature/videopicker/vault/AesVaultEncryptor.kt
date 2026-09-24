@@ -1,4 +1,4 @@
-package dev.anilbeesetti.nextplayer.feature.videopicker.vault
+package com.mediovyn.player.feature.videopicker.vault
 
 import java.io.File
 import java.io.FileInputStream

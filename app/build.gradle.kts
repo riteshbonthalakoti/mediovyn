@@ -136,7 +136,7 @@ dependencies {
 
     implementation(libs.accompanist.permissions)
 
-    implementation(libs.github.anilbeesetti.nextlib.mediainfo)
+    implementation(libs.github.riteshbonthalakoti.mediovynlib.mediainfo)
 
     testImplementation(libs.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
@@ -144,7 +144,7 @@ dependencies {
     androidTestImplementation(project(":core:domain"))
     androidTestImplementation(libs.androidx.datastore.core)
     androidTestImplementation(libs.androidx.media3.session)
-    androidTestImplementation(libs.github.anilbeesetti.nextlib.media3ext)
+    androidTestImplementation(libs.github.riteshbonthalakoti.mediovynlib.media3ext)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.androidx.test.rules)

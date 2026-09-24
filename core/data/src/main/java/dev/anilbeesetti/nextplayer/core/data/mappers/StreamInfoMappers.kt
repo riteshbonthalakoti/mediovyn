@@ -3,9 +3,9 @@ package com.mediovyn.player.core.data.mappers
 import com.mediovyn.player.core.model.AudioStreamInfo
 import com.mediovyn.player.core.model.SubtitleStreamInfo
 import com.mediovyn.player.core.model.VideoStreamInfo
-import io.github.anilbeesetti.nextlib.mediainfo.AudioStream
-import io.github.anilbeesetti.nextlib.mediainfo.SubtitleStream
-import io.github.anilbeesetti.nextlib.mediainfo.VideoStream
+import io.github.riteshbonthalakoti.mediovynlib.mediainfo.AudioStream
+import io.github.riteshbonthalakoti.mediovynlib.mediainfo.SubtitleStream
+import io.github.riteshbonthalakoti.mediovynlib.mediainfo.VideoStream
 
 internal fun VideoStream.toVideoStreamInfo() = VideoStreamInfo(
     index = index,
