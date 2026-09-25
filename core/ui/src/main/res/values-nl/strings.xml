@@ -24,7 +24,7 @@
     <string name="location">Locatie</string>
     <string name="no_videos_found">Geen videos gevonden</string>
     <string name="open_settings">Open instellingen</string>
-    <string name="permission_info">The Mediovyn Player heeft \"%1$s\" permissie nodig om media te kunnen vinden en afspelen. Zonder deze permissie zal dit niet werken. Geef toestemming om de app volledig te gebruiken.</string>
+    <string name="permission_info">The Mediovyn heeft \"%1$s\" permissie nodig om media te kunnen vinden en afspelen. Zonder deze permissie zal dit niet werken. Geef toestemming om de app volledig te gebruiken.</string>
     <string name="player_controls_exit">Navigeer naar boven</string>
     <string name="player_controls_next">Volgende speler</string>
     <string name="player_controls_play_pause">Speler: afspelen/pauzeren</string>

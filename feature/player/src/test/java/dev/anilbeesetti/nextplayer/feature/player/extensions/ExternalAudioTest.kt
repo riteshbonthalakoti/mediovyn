@@ -6,7 +6,7 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.TrackGroup
 import androidx.media3.common.util.UnstableApi
-import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
+import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith

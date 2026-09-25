@@ -21,7 +21,7 @@ import coil3.request.Options
 import coil3.toAndroidUri
 import okio.FileSystem
 import androidx.core.graphics.get
-import io.github.riteshbonthalakoti.mediovynlib.mediainfo.MediaThumbnailRetriever
+import io.github.anilbeesetti.nextlib.mediainfo.MediaThumbnailRetriever
 import kotlin.math.abs
 import coil3.decode.DecodeUtils
 import coil3.request.maxBitmapSize

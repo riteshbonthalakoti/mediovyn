@@ -2,7 +2,7 @@ package com.mediovyn.player.feature.player.extensions
 
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
-import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
+import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull

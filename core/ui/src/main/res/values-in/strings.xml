@@ -22,9 +22,9 @@
     <string name="navigate_up">Navigasi ke atas</string>
     <string name="no_videos_found">Tidak ada video yang ditemukan</string>
     <string name="open_settings">Buka Pengaturan</string>
-    <string name="permission_info">Aplikasi Mediovyn Player memerlukan izin \"%1$s\" untuk mengakses dan memutar media. Tanpa izin tersebut, akses dan pemutaran media tidak akan berfungsi. Untuk menggunakan aplikasi sepenuhnya, berikan izin.</string>
+    <string name="permission_info">Aplikasi Mediovyn memerlukan izin \"%1$s\" untuk mengakses dan memutar media. Tanpa izin tersebut, akses dan pemutaran media tidak akan berfungsi. Untuk menggunakan aplikasi sepenuhnya, berikan izin.</string>
     <string name="permission_not_granted">Izin Tidak Diberikan</string>
-    <string name="permission_settings">Aplikasi Mediovyn Player memerlukan izin \"%1$s\" untuk mengakses dan memutar media. Tanpa izin tersebut, akses dan pemutaran media tidak akan berfungsi. Untuk menggunakan aplikasi sepenuhnya, berikan izin dari pengaturan karena izin tersebut ditolak secara permanen.</string>
+    <string name="permission_settings">Aplikasi Mediovyn memerlukan izin \"%1$s\" untuk mengakses dan memutar media. Tanpa izin tersebut, akses dan pemutaran media tidak akan berfungsi. Untuk menggunakan aplikasi sepenuhnya, berikan izin dari pengaturan karena izin tersebut ditolak secara permanen.</string>
     <string name="player_controls_exit">Navigasi ke atas</string>
     <string name="permission_request">Permintaan Izin</string>
     <string name="player_controls_next">Pemain berikutnya</string>
@@ -52,7 +52,7 @@
     <string name="select_subtitle_track">Pilih trek subtitle</string>
     <string name="sort">Urutkan</string>
     <string name="title">Judul</string>
-    <string name="title_activity_player">Aktivitas Mediovyn Player</string>
+    <string name="title_activity_player">Aktivitas Mediovyn</string>
     <string name="playback">Pemutaran</string>
     <string name="interface_name">Antarmuka</string>
     <string name="a_z">A-Z</string>

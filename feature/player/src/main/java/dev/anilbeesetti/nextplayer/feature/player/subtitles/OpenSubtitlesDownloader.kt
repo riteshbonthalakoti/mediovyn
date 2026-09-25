@@ -17,7 +17,7 @@ data class SubtitleSearchResult(
 /**
  * OpenSubtitles API integration for MEDIOVYN.
  */
-class OpenSubtitlesDownloader(private val apiKey: String = "MediovynPlayerV1") {
+class OpenSubtitlesDownloader(private val apiKey: String = "SkmHWEcFuop3zT4mfrBjGQrWTgcTtnxz") {
 
     suspend fun searchSubtitles(file: File, language: String = "en"): List<SubtitleSearchResult> = withContext(Dispatchers.IO) {
         val results = mutableListOf<SubtitleSearchResult>()

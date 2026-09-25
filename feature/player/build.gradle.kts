@@ -73,8 +73,8 @@ dependencies {
     implementation(libs.androidx.media3.ui)
     implementation(libs.androidx.media3.ui.compose)
     implementation(libs.androidx.media3.session)
-    implementation(libs.github.riteshbonthalakoti.mediovynlib.media3ext)
-    implementation(libs.github.riteshbonthalakoti.mediovynlib.mediainfo)
+    implementation(libs.github.anilbeesetti.nextlib.media3ext)
+    implementation(libs.github.anilbeesetti.nextlib.mediainfo)
 
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.guava)

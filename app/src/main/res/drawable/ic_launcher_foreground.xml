@@ -1,15 +1,44 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-  <group android:scaleX="0.4"
-      android:scaleY="0.4"
-      android:translateX="32.4"
-      android:translateY="32.4">
-      <path
-          android:fillColor="#FF8FD4D1"
-          android:pathData="M36.7 92.81c-1.3 0-2.57-0.34-3.7-0.98-2.53-1.44-4.1-4.22-4.1-7.24V23.4c0-3.03 1.57-5.8 4.1-7.24 1.15-0.66 2.46-1 3.79-0.98 1.33 0.01 2.62 0.39 3.76 1.08l52.28 31.3c1.09 0.68 1.99 1.62 2.61 2.75 0.62 1.12 0.95 2.39 0.95 3.68 0 1.28-0.33 2.55-0.95 3.67-0.62 1.13-1.52 2.08-2.61 2.76l-52.29 31.3c-1.16 0.7-2.49 1.08-3.85 1.08Z"/>
-  </group>
-</vector>
+    
+    <!-- Outer Hexagonal / Rounded 'M' Emblem Badge -->
+    <path
+        android:pathData="M34,24 L74,24 C80,24 84,28 84,34 L84,74 C84,80 80,84 74,84 L34,84 C28,84 24,80 24,74 L24,34 C24,28 28,24 34,24 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="24"
+                android:startY="24"
+                android:endX="84"
+                android:endY="84"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#7C3AED" />
+                <item android:offset="1.0" android:color="#4C1D95" />
+            </gradient>
+        </aapt:attr>
+    </path>
 
+    <!-- Stylized 'M' Inner Cutout & Glowing Cyan Play Button -->
+    <path
+        android:pathData="M38,36 L48,54 L54,44 L60,54 L70,36 L70,72 L62,72 L62,50 L54,64 L46,50 L46,72 L38,72 Z"
+        android:fillColor="#050508" />
+
+    <!-- Center Cyan Glow Play Triangle -->
+    <path
+        android:pathData="M50,48 L64,54 L50,60 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="50"
+                android:startY="48"
+                android:endX="64"
+                android:endY="60"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#06B6D4" />
+                <item android:offset="1.0" android:color="#0891B2" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

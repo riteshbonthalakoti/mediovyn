@@ -3,7 +3,7 @@ package com.mediovyn.player.feature.player.service
 import com.mediovyn.player.feature.player.model.DecoderRecoveryState
 import com.mediovyn.player.feature.player.model.DecoderRecoveryStatus
 import com.mediovyn.player.feature.player.model.DecoderTrackType
-import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
+import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
 
 /** Keeps Mediovyn's decoder fallback policy separate from mediovynlib's decoder switching. */
 internal class DecoderRecoveryManager {

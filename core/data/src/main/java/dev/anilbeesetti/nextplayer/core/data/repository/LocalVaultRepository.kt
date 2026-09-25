@@ -19,7 +19,7 @@ import com.mediovyn.player.core.database.entities.HiddenVideoEntity
 import com.mediovyn.player.core.media.services.MediaOperationsService
 import com.mediovyn.player.core.model.MediaInfo
 import com.mediovyn.player.core.model.Video
-import io.github.riteshbonthalakoti.mediovynlib.mediainfo.MediaInfoBuilder
+import io.github.anilbeesetti.nextlib.mediainfo.MediaInfoBuilder
 import java.io.File
 import java.util.UUID
 import kotlinx.coroutines.CancellationException

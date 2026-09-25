@@ -33,7 +33,7 @@ import com.mediovyn.player.feature.player.model.DecoderTrackType
 import com.mediovyn.player.feature.player.model.descriptionRes
 import com.mediovyn.player.feature.player.model.labelRes
 import com.mediovyn.player.feature.player.model.selectableDecoderModes
-import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
+import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
 
 @Composable
 fun BoxScope.DecoderSelectorView(

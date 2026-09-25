@@ -19,7 +19,7 @@
     <string name="duration">مدت</string>
     <string name="largest">بزرگ‌ترین</string>
     <string name="dark_theme">حالت تاریک</string>
-    <string name="permission_settings">برنامه Mediovyn Player برای دسترسی و پخش رسانه به مجوز «%1$s» نیاز دارد. بدون آن، دسترسی به رسانه و پخش کار نخواهد کرد. برای بهره‌مندی کامل از برنامه، از تنظیمات اجازه دهید زیرا مجوز برای همیشه رد شده است.</string>
+    <string name="permission_settings">برنامه Mediovyn برای دسترسی و پخش رسانه به مجوز «%1$s» نیاز دارد. بدون آن، دسترسی به رسانه و پخش کار نخواهد کرد. برای بهره‌مندی کامل از برنامه، از تنظیمات اجازه دهید زیرا مجوز برای همیشه رد شده است.</string>
     <string name="resume_description">انتخاب کنید که آیا ویدیوهای پخش شده از نقطه‌ای که متوقف شده است از سر گرفته شود یا خیر</string>
     <string name="player_name">پخش کننده</string>
     <string name="remember_brightness_level_description">سطح روشنایی بین پخش‌ها را به خاطر بسپار</string>
@@ -41,7 +41,7 @@
     <string name="open_settings">باز کردن تنظیمات</string>
     <string name="navigate_up">پیمایش به بالا</string>
     <string name="permission_not_granted">مجوز اعطا نشده است</string>
-    <string name="permission_info">برنامه Mediovyn Player برای دسترسی و پخش رسانه به مجوز «%1$s» نیاز دارد. بدون آن، دسترسی به رسانه و پخش کار نخواهد کرد. برای بهره‌مندی کامل از برنامه، اجازه دهید.</string>
+    <string name="permission_info">برنامه Mediovyn برای دسترسی و پخش رسانه به مجوز «%1$s» نیاز دارد. بدون آن، دسترسی به رسانه و پخش کار نخواهد کرد. برای بهره‌مندی کامل از برنامه، اجازه دهید.</string>
     <string name="permission_request">درخواست مجوز</string>
     <string name="player_controls_exit">پیمایش به بالا</string>
     <string name="player_controls_next">پخش بعدی</string>
@@ -59,7 +59,7 @@
     <string name="settings">تنظیمات</string>
     <string name="sort">چیدمان</string>
     <string name="title">عنوان</string>
-    <string name="title_activity_player">فعالیت‌های Mediovyn Player</string>
+    <string name="title_activity_player">فعالیت‌های Mediovyn</string>
     <string name="unknown_error">خطایی ناشناخته اتفاق افتاده است</string>
     <string name="interface_name">رابط کاربری</string>
     <string name="a_z">الف-ی</string>

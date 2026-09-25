@@ -6,7 +6,7 @@ import com.mediovyn.player.core.data.repository.fake.FakePreferencesRepository
 import com.mediovyn.player.core.domain.GetSortedPlaylistUseCase
 import com.mediovyn.player.core.domain.GetSortedVideosUseCase
 import com.mediovyn.player.feature.player.model.DecoderServiceState
-import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
+import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.cancel
