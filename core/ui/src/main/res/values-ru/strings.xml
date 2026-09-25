@@ -39,7 +39,7 @@
     <string name="dark_theme">Тёмная тема</string>
     <string name="video_zoom">Увеличить видео</string>
     <string name="controls_lock">Заблокировать управление</string>
-    <string name="title_activity_player">Активность Mediovyn Player</string>
+    <string name="title_activity_player">Активность Mediovyn</string>
     <string name="controls_unlock">Разблокировать управление</string>
     <string name="select_playback_speed">Выбор скорости воспроизведения</string>
     <string name="fast_seek">Быстрая перемотка</string>
@@ -50,12 +50,12 @@
     <string name="duration">Длительность</string>
     <string name="menu">Меню</string>
     <string name="open_settings">Открыть настройки</string>
-    <string name="permission_info">Приложению Mediovyn Player требуется разрешение «%1$s» для доступа и воспроизведения видео и аудио. Чтобы использовать приложение, пожалуйста, предоставьте это разрешение в настройках.</string>
+    <string name="permission_info">Приложению Mediovyn требуется разрешение «%1$s» для доступа и воспроизведения видео и аудио. Чтобы использовать приложение, пожалуйста, предоставьте это разрешение в настройках.</string>
     <string name="permission_request">Запрос на разрешение</string>
     <string name="group_videos">Группировка видео по папкам</string>
     <string name="location">Расположение</string>
     <string name="permission_not_granted">Разрешение не выдано</string>
-    <string name="permission_settings">Приложению Mediovyn Player требуется разрешение «%1$s» для доступа и воспроизведения видео и аудио. Чтобы использовать приложение, пожалуйста, предоставьте разрешение в настройках, поскольку оно было запрещено.</string>
+    <string name="permission_settings">Приложению Mediovyn требуется разрешение «%1$s» для доступа и воспроизведения видео и аудио. Чтобы использовать приложение, пожалуйста, предоставьте разрешение в настройках, поскольку оно было запрещено.</string>
     <string name="player_name">Проигрыватель</string>
     <string name="quick_settings">Быстрые настройки</string>
     <string name="remember_brightness_level">Запоминать уровень яркости</string>
@@ -172,7 +172,7 @@
     <string name="language">Язык</string>
     <string name="okay">Ясно</string>
     <string name="audio_track">Аудиодорожка</string>
-    <string name="require_audio_focus_desc">Ставить на паузу другие источники звука при воспроизведении в Mediovyn Player и наоборот.</string>
+    <string name="require_audio_focus_desc">Ставить на паузу другие источники звука при воспроизведении в Mediovyn и наоборот.</string>
     <string name="sample_rate">Частота дискретизации</string>
     <string name="file">Файл</string>
     <string name="resolution">Разрешение</string>

@@ -84,11 +84,11 @@
     <string name="manage_folders_desc">Wybierz katalogi, które mają być wykluczone z biblioteki multimediów</string>
     <string name="screen_rotation">Obrót ekranu</string>
     <string name="extension">Rozszerzenie</string>
-    <string name="permission_settings">Aplikacja Mediovyn Player wymaga pozwolenia %1$s, aby uzyskać dostęp do multimediów. Bez niego dostęp do multimediów i odtwarzanie nie będą działać. Aby w pełni korzystać z aplikacji, należy przyznać uprawnienie w ustawieniach, ponieważ zostało ono trwale odrzucone.</string>
+    <string name="permission_settings">Aplikacja Mediovyn wymaga pozwolenia %1$s, aby uzyskać dostęp do multimediów. Bez niego dostęp do multimediów i odtwarzanie nie będą działać. Aby w pełni korzystać z aplikacji, należy przyznać uprawnienie w ustawieniach, ponieważ zostało ono trwale odrzucone.</string>
     <string name="path">Ścieżka</string>
     <string name="media_library">Biblioteka mediów</string>
     <string name="fast_seek">Szybkie wyszukiwanie</string>
-    <string name="permission_info">Aplikacja Mediovyn Player wymaga pozwolenia %1$s, aby mieć dostęp do multimediów. Bez niego, dostęp do multimediów i odtwarzanie nie będą działać. Aby w pełni korzystać z aplikacji, nadaj pozwolenie.</string>
+    <string name="permission_info">Aplikacja Mediovyn wymaga pozwolenia %1$s, aby mieć dostęp do multimediów. Bez niego, dostęp do multimediów i odtwarzanie nie będą działać. Aby w pełni korzystać z aplikacji, nadaj pozwolenie.</string>
     <string name="stretch">Rozciągnięcie</string>
     <string name="permission_not_granted">Nie udzielono zezwolenia</string>
     <string name="resolution">Rozdzielczość</string>
@@ -99,7 +99,7 @@
     <string name="pip_settings">Tryb \"Obraz w obrazie\"</string>
     <string name="pip_settings_description">Automatyczne przełączanie na miniaturowy odtwarzacz po dotknięciu przycisku \"Ekran główny\"</string>
     <string name="remember_selections_description">Zapamiętuje wybory dla każdego pliku, takie jak ścieżka audio, ścieżka napisów itp.</string>
-    <string name="title_activity_player">Czynności Mediovyn Player</string>
+    <string name="title_activity_player">Czynności Mediovyn</string>
     <string name="video_zoom">Powiększanie wideo</string>
     <string name="controls_unlock">Elementy sterujące odblokowywaniem</string>
     <string name="dynamic_theme_description">Stosuje kolory z tapety systemowej do motywu aplikacji</string>

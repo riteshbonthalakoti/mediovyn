@@ -34,8 +34,9 @@ dependencies {
     implementation(project(":core:datastore"))
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.datastore.core)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.github.riteshbonthalakoti.mediovynlib.mediainfo)
+    implementation(libs.github.anilbeesetti.nextlib.mediainfo)
 
     // Koin
     implementation(libs.koin.core)

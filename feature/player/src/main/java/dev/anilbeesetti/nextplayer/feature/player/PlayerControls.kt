@@ -29,7 +29,7 @@ import com.mediovyn.player.feature.player.ui.OverlayView
 import com.mediovyn.player.feature.player.ui.controls.ControlsBottomView
 import com.mediovyn.player.feature.player.ui.controls.ControlsMiddleView
 import com.mediovyn.player.feature.player.ui.controls.ControlsTopView
-import io.github.riteshbonthalakoti.mediovynlib.media3ext.ffdecoder.DecoderMode
+import io.github.anilbeesetti.nextlib.media3ext.ffdecoder.DecoderMode
 
 @OptIn(UnstableApi::class)
 @Composable

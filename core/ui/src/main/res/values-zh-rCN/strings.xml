@@ -15,10 +15,10 @@
     <string name="double_tap_description">选择双击手势操作</string>
     <string name="fast_seek_description">跳转到最近的关键帧而非精确帧</string>
     <string name="no_videos_found">未找到视频</string>
-    <string name="permission_info">Mediovyn Player 应用需要“%1$s”权限以访问和播放媒体。没有它，则无法访问和播放媒体。要使用应用的完整功能，请授予此权限。</string>
+    <string name="permission_info">Mediovyn 应用需要“%1$s”权限以访问和播放媒体。没有它，则无法访问和播放媒体。要使用应用的完整功能，请授予此权限。</string>
     <string name="permission_not_granted">未授予权限</string>
     <string name="permission_request">权限请求</string>
-    <string name="permission_settings">Mediovyn Player 应用需要“%1$s”权限以访问和播放媒体。没有它，则无法访问和播放媒体。由于已永久拒绝了此权限，要使用应用的完整功能，请在设置中授予此权限。</string>
+    <string name="permission_settings">Mediovyn 应用需要“%1$s”权限以访问和播放媒体。没有它，则无法访问和播放媒体。由于已永久拒绝了此权限，要使用应用的完整功能，请在设置中授予此权限。</string>
     <string name="player_controls_exit">向上导航</string>
     <string name="player_controls_next">下一个</string>
     <string name="player_controls_play_pause">播放/暂停</string>
@@ -41,7 +41,7 @@
     <string name="dark_theme">深色主题</string>
     <string name="dynamic_theme">动态配色主题</string>
     <string name="sort">排序</string>
-    <string name="title_activity_player">Mediovyn Player 活动</string>
+    <string name="title_activity_player">Mediovyn 活动</string>
     <string name="unknown_error">发生未知错误</string>
     <string name="playback">播放</string>
     <string name="interface_name">界面</string>

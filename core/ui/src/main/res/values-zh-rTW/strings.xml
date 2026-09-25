@@ -111,7 +111,7 @@
     <string name="dark_theme">深色主題</string>
     <string name="cancel">取消</string>
     <string name="extension">副檔名</string>
-    <string name="permission_settings">Mediovyn Player 應用程式需要 \"%1$s\" 權限以存取或播放媒體。沒有它，媒體存取與播放功能將無法工作。要完整地使用此應用程式，請從設定中授予權限，因為它已經被永久地拒絕。</string>
+    <string name="permission_settings">Mediovyn 應用程式需要 \"%1$s\" 權限以存取或播放媒體。沒有它，媒體存取與播放功能將無法工作。要完整地使用此應用程式，請從設定中授予權限，因為它已經被永久地拒絕。</string>
     <string name="monospace">等寬字型</string>
     <string name="path">路徑</string>
     <string name="appearance_description">調整此應用程式以符合您的喜好</string>
@@ -133,7 +133,7 @@
     <string name="select_playback_speed">選擇播放速度</string>
     <string name="seek_gesture">跳轉手勢</string>
     <string name="require_audio_focus_desc">播放影片時暫停其他播放器，反之亦然</string>
-    <string name="permission_info">Mediovyn Player 應用程式需要 \"%1$s\" 權限以存取或播放媒體。沒有它，媒體存取與播放功能將無法工作。要完整地使用此應用程式，請授予權限。</string>
+    <string name="permission_info">Mediovyn 應用程式需要 \"%1$s\" 權限以存取或播放媒體。沒有它，媒體存取與播放功能將無法工作。要完整地使用此應用程式，請授予權限。</string>
     <string name="settings">設定</string>
     <string name="z_a">Z-A</string>
     <string name="decoder_desc">硬體與軟體解碼器選項</string>
@@ -141,7 +141,7 @@
     <string name="best_fit">最適合</string>
     <string name="about_name">關於</string>
     <string name="subtitle">字幕</string>
-    <string name="title_activity_player">Mediovyn Player 活動</string>
+    <string name="title_activity_player">Mediovyn 活動</string>
     <string name="serif">襯線字型</string>
     <string name="fast_seek_description">挑轉至最接近的關鍵影格而不是準確的影格。</string>
     <string name="subtitle_text_bold">粗體字幕文字</string>

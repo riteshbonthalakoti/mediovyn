@@ -70,7 +70,7 @@ import kotlinx.coroutines.launch
 
 private const val GITHUB_URL = "https://github.com/riteshbonthalakoti/Mediovyn"
 private const val KOFI_URL = "https://ko-fi.com/riteshbonthalakoti"
-private const val PAYPAL_URL = "https://paypal.me/riteshbonthalakoti"
+private const val PAYPAL_URL = "https://paypal.me/ritesh1918"
 private const val UPI_ID = "riteshbonthalakoti10@oksbi"
 
 @Composable
@@ -178,6 +178,7 @@ fun AboutApp(
     onLibrariesClick: () -> Unit,
 ) {
     val context = LocalContext.current
+    val uriHandler = LocalUriHandler.current
     val appIcon = remember { context.appIcon()?.asImageBitmap() }
 
     val colorPrimary = MaterialTheme.colorScheme.primaryContainer
