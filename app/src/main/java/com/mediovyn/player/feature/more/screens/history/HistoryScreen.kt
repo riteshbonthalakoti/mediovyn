@@ -1,0 +1,140 @@
+package com.mediovyn.player.feature.more.screens.history
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.FilledTonalIconButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.mediovyn.player.core.ui.R
+import com.mediovyn.player.core.ui.base.DataState
+import com.mediovyn.player.core.ui.components.NextDialog
+import com.mediovyn.player.core.ui.components.MediovynTopAppBar
+import com.mediovyn.player.core.ui.components.tvFocusRing
+import com.mediovyn.player.core.ui.designsystem.MediovynIcons
+import com.mediovyn.player.core.ui.extensions.copy
+import com.mediovyn.player.feature.videopicker.composables.CenterCircularProgressBar
+import com.mediovyn.player.feature.videopicker.composables.VideoListItem
+
+@Composable
+fun HistoryScreen(
+    viewModel: HistoryViewModel,
+) {
+    val state by viewModel.state.collectAsStateWithLifecycle()
+
+    HistoryScreenContent(
+        state = state,
+        onAction = viewModel::onAction,
+    )
+}
+
+@Composable
+internal fun HistoryScreenContent(
+    state: HistoryUiState,
+    onAction: (HistoryAction) -> Unit,
+) {
+    var showClearConfirmation by remember { mutableStateOf(false) }
+
+    Scaffold(
+        topBar = {
+            MediovynTopAppBar(
+                title = stringResource(R.string.history),
+                navigationIcon = {
+                    FilledTonalIconButton(
+                        onClick = { onAction(HistoryAction.NavigateUp) },
+                        modifier = Modifier.tvFocusRing(),
+                    ) {
+                        Icon(
+                            imageVector = MediovynIcons.ArrowBack,
+                            contentDescription = stringResource(R.string.navigate_up),
+                        )
+                    }
+                },
+                actions = {
+                    TextButton(
+                        enabled = state.history.result.orEmpty().isNotEmpty(),
+                        onClick = { showClearConfirmation = true },
+                        modifier = Modifier.tvFocusRing(),
+                    ) {
+                        Text(stringResource(R.string.clear_all))
+                    }
+                },
+            )
+        },
+        containerColor = MaterialTheme.colorScheme.surfaceContainer,
+    ) { scaffoldPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(scaffoldPadding.copy(bottom = 0.dp))
+                .clip(RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp))
+                .background(MaterialTheme.colorScheme.background),
+        ) {
+            when (val history = state.history) {
+                is DataState.Loading -> CenterCircularProgressBar()
+                is DataState.Error -> Text(
+                    text = history.value.message.orEmpty(),
+                    modifier = Modifier.padding(16.dp),
+                    color = MaterialTheme.colorScheme.error,
+                )
+                is DataState.Success -> LazyColumn(
+                    contentPadding = PaddingValues(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
+                ) {
+                    itemsIndexed(history.value, key = { _, video -> video.uriString }) { index, video ->
+                        VideoListItem(
+                            video = video,
+                            isRecentlyPlayedVideo = false,
+                            preferences = state.preferences,
+                            isFirstItem = index == 0,
+                            isLastItem = index == history.value.lastIndex,
+                            onClick = { onAction(HistoryAction.PlayVideo(video.uriString)) },
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    if (showClearConfirmation) {
+        NextDialog(
+            onDismissRequest = { showClearConfirmation = false },
+            title = { Text(stringResource(R.string.clear_history)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        onAction(HistoryAction.ClearHistory)
+                        showClearConfirmation = false
+                    },
+                ) {
+                    Text(stringResource(R.string.clear_all))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showClearConfirmation = false }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            },
+            content = { Text(stringResource(R.string.clear_history_confirmation)) },
+        )
+    }
+}
