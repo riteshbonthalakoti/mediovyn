@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Mediovyn.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="windowSplashScreenBackground">#171B1C</item>
+        <item name="postSplashScreenTheme">@style/Theme.Mediovyn</item>
+    </style>
+
+    <style name="Theme.Mediovyn" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar" />
+</resources>

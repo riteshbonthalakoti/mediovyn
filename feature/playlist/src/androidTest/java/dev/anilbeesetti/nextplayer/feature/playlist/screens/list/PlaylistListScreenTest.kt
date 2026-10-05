@@ -1,0 +1,175 @@
+package com.mediovyn.player.feature.playlist.screens.list
+
+import android.content.Context
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performKeyInput
+import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.pressKey
+import androidx.test.core.app.ApplicationProvider
+import com.mediovyn.player.core.common.extensions.isTelevision
+import com.mediovyn.player.core.model.PlaylistSummary
+import com.mediovyn.player.core.model.PlaylistType
+import com.mediovyn.player.core.ui.base.DataState
+import com.mediovyn.player.core.ui.components.LocalTopLevelFabSetter
+import com.mediovyn.player.core.ui.components.TopLevelFabKey
+import com.mediovyn.player.core.ui.components.TopLevelFabState
+import com.mediovyn.player.core.ui.theme.MediovynTheme
+import org.junit.Assert.assertEquals
+import org.junit.Rule
+import org.junit.Test
+
+class PlaylistListScreenTest {
+    @get:Rule
+    val composeRule = createComposeRule()
+
+    @Test
+    fun createFabEmitsShowCreateDialogAction() {
+        val actions = mutableListOf<PlaylistUiAction>()
+        var fabState: TopLevelFabState? = null
+
+        composeRule.setContent {
+            MediovynTheme {
+                CompositionLocalProvider(
+                    LocalTopLevelFabSetter provides { key, state ->
+                        if (key == TopLevelFabKey.PLAYLISTS) fabState = state
+                    },
+                ) {
+                    PlaylistListScreenContent(
+                        state = PlaylistListUiState(
+                            playlistsDataState = DataState.Success(emptyList()),
+                        ),
+                        onAction = actions::add,
+                    )
+                }
+            }
+        }
+
+        composeRule.runOnIdle { checkNotNull(fabState).onClick() }
+
+        assertEquals(listOf(PlaylistUiAction.ShowCreationChooser), actions)
+    }
+
+    @Test
+    fun createDialogEmitsCreateAction() {
+        val actions = mutableListOf<PlaylistUiAction>()
+
+        composeRule.setContent {
+            MediovynTheme {
+                PlaylistListScreenContent(
+                    state = PlaylistListUiState(
+                        playlistsDataState = DataState.Success(emptyList()),
+                        creationDialog = PlaylistCreationDialog.LOCAL_NAME,
+                    ),
+                    onAction = actions::add,
+                )
+            }
+        }
+
+        val nameField = composeRule.onNodeWithText("Playlist name")
+        // On TV the field is selected but read-only until the remote activates it.
+        if (ApplicationProvider.getApplicationContext<Context>().isTelevision) {
+            nameField.performKeyInput { pressKey(Key.DirectionCenter) }
+        }
+        nameField.performTextInput("Movies")
+        composeRule.onNodeWithText("Create").performClick()
+
+        assertEquals(listOf(PlaylistUiAction.CreateLocal("Movies")), actions)
+        composeRule.onAllNodesWithText("M3U URL").assertCountEquals(0)
+    }
+
+    @Test
+    fun creationChooserOffersLocalUrlAndFileSources() {
+        composeRule.setContent {
+            MediovynTheme {
+                PlaylistListScreenContent(
+                    state = PlaylistListUiState(
+                        playlistsDataState = DataState.Success(emptyList()),
+                        creationDialog = PlaylistCreationDialog.CHOOSER,
+                    ),
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("Create local playlist").assertIsDisplayed()
+        composeRule.onNodeWithText("Add M3U playlist from URL").assertIsDisplayed()
+        composeRule.onNodeWithText("Add M3U playlist from file").assertIsDisplayed()
+    }
+
+    @Test
+    fun rowShowsLocalCountAndEmitsRenameAction() {
+        val playlist = playlistSummary()
+        val actions = mutableListOf<PlaylistUiAction>()
+
+        composeRule.setContent {
+            MediovynTheme {
+                PlaylistListScreenContent(
+                    state = PlaylistListUiState(
+                        playlistsDataState = DataState.Success(listOf(playlist)),
+                    ),
+                    onAction = actions::add,
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("Local · 2 videos").assertIsDisplayed()
+        composeRule.onNodeWithContentDescription("Playlist actions").performClick()
+        composeRule.onNodeWithText("Rename playlist").assertIsDisplayed()
+        composeRule.onNodeWithText("Delete").assertIsDisplayed()
+        composeRule.onNodeWithText("Rename playlist").performClick()
+
+        assertEquals(listOf(PlaylistUiAction.ShowRenameDialogFor(playlist)), actions)
+    }
+
+    @Test
+    fun deleteDialogEmitsDeleteAction() {
+        val playlist = playlistSummary()
+        val actions = mutableListOf<PlaylistUiAction>()
+
+        composeRule.setContent {
+            MediovynTheme {
+                PlaylistListScreenContent(
+                    state = PlaylistListUiState(
+                        playlistsDataState = DataState.Success(listOf(playlist)),
+                        showDeleteDialogFor = playlist,
+                    ),
+                    onAction = actions::add,
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("Delete").performClick()
+
+        assertEquals(listOf(PlaylistUiAction.Delete(playlist.id)), actions)
+    }
+
+    @Test
+    fun emptySuccessShowsEmptyState() {
+        composeRule.setContent {
+            MediovynTheme {
+                PlaylistListScreenContent(
+                    state = PlaylistListUiState(
+                        playlistsDataState = DataState.Success(emptyList()),
+                    ),
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("No playlists yet").assertIsDisplayed()
+    }
+}
+
+private fun playlistSummary() = PlaylistSummary(
+    id = 7,
+    name = "Movies",
+    type = PlaylistType.LOCAL,
+    itemCount = 2,
+    lastRefreshedAt = null,
+)
